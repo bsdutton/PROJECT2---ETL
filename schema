@@ -1,0 +1,28 @@
+CREATE TABLE movie_tb (
+      id bigint PRIMARY KEY,
+	  imdb_id text ,
+      
+	  budget bigint,
+	  title text ,
+	  release_date date,
+	  revenue bigint,
+	  vote_average FLOAT
+	 
+  );
+  
+  
+CREATE TABLE rating_tb (
+     movieId bigint  PRIMARY KEY,
+     rating FLOAT
+	
+	  );
+
+
+CREATE TABLE link_tb (
+	movieId bigint,
+    imdb_id text ,
+	tmdbId bigint ,
+ 	foreign key (tmdbId) REFERENCES movie_tb(id),
+	foreign key (movieId) REFERENCES rating_tb(movieId)
+
+  );

@@ -1,0 +1,28 @@
+ select * from movie_tb
+ limit 10
+
+ select * from link_tb
+ limit 10
+    
+ select * from rating_tb
+ limit 10
+ 
+create view film AS 
+SELECT movie_tb.id, movie_tb.budget, movie_tb.title, movie_tb.release_date , movie_tb.revenue , movie_tb.vote_average ,link_tb.imdb_id ,link_tb.tmdbId ,rating_tb.movieid ,rating_tb.rating 
+FROM movie_tb
+inner JOIN link_tb
+ON  movie_tb.id = link_tb.tmdbId
+inner JOIN rating_tb
+ON   link_tb.movieid = rating_tb.movieid ;
+
+
+ 
+create view z AS 
+SELECT movie_tb.id, movie_tb.budget , movie_tb.title, movie_tb.release_date , movie_tb.revenue , movie_tb.vote_average  
+FROM movie_tb
+inner JOIN link_tb
+ON  movie_tb.id = link_tb.tmdbId ;
+
+
+select * from film
+limit 10
