@@ -1,8 +1,9 @@
 CREATE TABLE movie_tb (
-      id bigint PRIMARY KEY,
-	  imdb_id text ,
-      
-	  budget bigint,
+	 
+      id int PRIMARY KEY ,
+	  imdb_id VARCHAR,
+	 
+      budget int,
 	  title text ,
 	  release_date date,
 	  revenue bigint,
@@ -10,19 +11,25 @@ CREATE TABLE movie_tb (
 	 
   );
   
+  CREATE TABLE genre_tb (
+  	
+  id INT PRIMARY KEY  ,
+  genre TEXT,
+  foreign key(movieId) references movie_tb(id)
+);
+
+  
   
 CREATE TABLE rating_tb (
-     movieId bigint  PRIMARY KEY,
-     rating FLOAT
-	
+     id int PRIMARY KEY  ,
+     rating FLOAT,
+	foreign key(movieId) references movie_tb(id)
 	  );
 
 
 CREATE TABLE link_tb (
-	movieId bigint,
-    imdb_id text ,
-	tmdbId bigint ,
- 	foreign key (tmdbId) REFERENCES movie_tb(id),
-	foreign key (movieId) REFERENCES rating_tb(movieId)
-
-  );
+id INT PRIMARY KEY  ,
+imdbId int,
+tmdbId INT,
+foreign key(movieId) references movie_tb(id)
+);

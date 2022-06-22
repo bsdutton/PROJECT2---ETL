@@ -7,22 +7,29 @@
  select * from rating_tb
  limit 10
  
-create view film AS 
-SELECT movie_tb.id, movie_tb.budget, movie_tb.title, movie_tb.release_date , movie_tb.revenue , movie_tb.vote_average ,link_tb.imdb_id ,link_tb.tmdbId ,rating_tb.movieid ,rating_tb.rating 
-FROM movie_tb
-inner JOIN link_tb
-ON  movie_tb.id = link_tb.tmdbId
-inner JOIN rating_tb
-ON   link_tb.movieid = rating_tb.movieid ;
-
-
+ select * from genre_tb
+ limit 10
  
-create view z AS 
-SELECT movie_tb.id, movie_tb.budget , movie_tb.title, movie_tb.release_date , movie_tb.revenue , movie_tb.vote_average  
+create view movie_by_rating AS 
+SELECT movie_tb.id, movie_tb.budget, movie_tb.title, movie_tb.release_date , movie_tb.revenue , movie_tb.vote_average 
 FROM movie_tb
-inner JOIN link_tb
-ON  movie_tb.id = link_tb.tmdbId ;
+inner JOIN rating_tb
+ON   movie_tb.id  = rating_tb.rating 
 
 
-select * from film
+create view movie_by_geners AS 
+SELECT movie_tb.id, movie_tb.budget, movie_tb.title, movie_tb.release_date , movie_tb.revenue , movie_tb.vote_average ,genre_tb.genre
+FROM movie_tb
+inner JOIN genre_tb
+ON   movie_tb.id  = movie_tb.id;
+
+create view movie_by_rating_geners AS 
+SELECT movie_tb.id, movie_tb.budget, movie_tb.title, movie_tb.release_date , movie_tb.revenue , movie_tb.vote_average ,genre_tb.genre
+FROM movie_tb
+inner JOIN rating_tb
+ON   movie_tb.id  = rating_tb.rating 
+inner JOIN genre_tb
+ON   movie_tb.id  = movie_tb.id;
+
+select * from movie_by_rating_geners
 limit 10
