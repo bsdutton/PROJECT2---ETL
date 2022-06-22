@@ -1,5 +1,4 @@
-# Movie Recommendation Database
-**ETL Project**
+# Movie Recommendation Database -- ETL Project
 
 ## Team Members:
 * Ali Saghafi
