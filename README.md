@@ -100,13 +100,8 @@ With pandas we were able to query from the database and do some analysis. The fu
   <img src="Resources/Plot Images/title_genere_rating.png"> 
 </p>
 
-* Query top 10 most profitable movies:
+* Query top 10 most profitable movies and their average ratings:
 <p align="center">
   <img src="Resources/Screenshot images/table5_most_profitable_movies.png"> 
-</p>
-
-* Query top 10 most incurred loss movies: 
- <p align="center">
-  <img src="Resources/Screenshot images/table6_most_loss_movies.png"> 
 </p>
 <br/>
