@@ -66,6 +66,8 @@ Next, we loaded our data into the local Postgres database.
 * We created an engine using ```create_engine()``` and enter the username and password through a config.py file, which was ignored for security purposes. The engine would connect to a local databased created in pgAdmin4 called ```movies_db```.
 * We then load dataframes to our database by ```.to_sql()``` function, the following dataframes were loaded: ```movies_df```, ```genre_list_df```, ```ratings_df```, ```links_df``` and ```profit_df```.
 
+<br/>
+
 ### Database queries and data analysis
 With pandas we were able to query from the database and do some analysis. The function we used was ```pd.read_sql_query()```. We did the following analysis:
 * Query the database to get movie titles and their genres:
