@@ -21,7 +21,7 @@ Tools:
 - Python, Pandas, SQLAlchemy, Jupyter Notebook, PostgreSQL, pgAdmin 4
 
 ## Guidance:
-All ETL code were in the [ETL.ipynb]() file. SQL code are in [Sql scripts](Resources/Sql%20scripts) folder. CSV tables can be also found in [Resources](Resources) folder. 
+All ETL code were in the [ETL.ipynb](ETL.ipynb) file. SQL code are in [Sql scripts](Resources/Sql%20scripts) folder. CSV tables can be also found in [Resources](Resources) folder. 
 
 ## Results:
 
