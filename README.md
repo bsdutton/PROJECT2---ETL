@@ -8,7 +8,8 @@
 * Yuntian Xue
 
 ## Project Overview: 
-In this project, we worked with the movie dataset from Kaggle. With the basic ETL procedures: extract, transform, and load, we were able to create our own movie database in PostgreSQL. Through queries to the database, we then did some data analysis, plotting and drew some conclusions. With the movies dataset we created, we are able to make recommendations based on their ratings and genre. 
+In this project, we worked with the movie dataset from Kaggle. With the basic ETL procedures: extract, transform, and load, we were able to create our own movie database in PostgreSQL. Through queries to the database, we then did some data analysis, plotting and drew some conclusions. 
+With the movies database we created, we are able to make recommendations based on their ratings and genre. 
 
 ## Resources:
 
@@ -63,7 +64,7 @@ All ETL code were in the [ETL.ipynb](ETL.ipynb) file. SQL code are in [Sql scrip
 
 ### Load the data to a PostgreSQL Movie Database
 Next, we loaded our data into the local Postgres database. 
-* We created an engine using ```create_engine()``` and enter the username and password through a config.py file, which was ignored for security purposes. The engine would connect to a local databased created in pgAdmin4 called ```movies_db```.
+* We created an engine using ```create_engine()``` and enter the username and password through a config.py file, which was ignored for security purposes. The engine would connect to a local databased created in pgAdmin4 called ```movies_db```. In the database we have five tables: `profit_table`, `movies`, `genre`, `ratings`, `links` .
 * We then load dataframes to our database by ```.to_sql()``` function, the following dataframes were loaded: ```movies_df```, ```genre_list_df```, ```ratings_df```, ```links_df``` and ```profit_df```.
 
 <br/>
