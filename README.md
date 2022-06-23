@@ -29,7 +29,7 @@ All ETL code were in the [ETL.ipynb](ETL.ipynb) file. SQL code are in [Sql scrip
 * We extracted data from movies_metadata.csv, ratings_small.csv and links_small.csv and stored in three dataframes: ```movies_metadata_df```, ```links_small_df``` and ```ratings_small_df``` by pandas. 
 <br/>
 
-### Clean and transform movies_matadata dataframe
+### Clean and transform movies_metadata dataframe
 * We checked the columns of ```movies_metadata_df``` and created a ```movies_df``` with the following columns: 
 ```
 "id", "imdb_id", "title", "release_date", "budget", "revenue", "vote_average"
