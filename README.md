@@ -97,7 +97,7 @@ With pandas we were able to query from the database and do some analysis. The fu
 
 * Plot to show movie title, genre and ratings:
 <p align="center">
-  <img src="Resources/Plot Images/title_genere_rating.png"> 
+  <img src="Resources/Plot Images/title, genre,rating.png"> 
 </p>
 
 * Query top 10 most profitable movies and their average ratings:
